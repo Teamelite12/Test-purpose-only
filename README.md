@@ -220,6 +220,6 @@ This is a test repository created for **educational and demonstration purposes**
 
 ⭐ Star this repository if you find it helpful!
 
-[Back to Top](#-test-purpose-only)
+[Back to Top](#test-purpose-only)
 
 </div>
