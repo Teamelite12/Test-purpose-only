@@ -28,9 +28,9 @@ This repository serves as a hands-on learning environment for developers explori
 ### What's Inside index.html
 
 The demo page includes:
-- ⚙️ **Settings** - Configuration options interface element
-- ❓ **Help** - User assistance section element
-- 👋 **Greeting** - A friendly "Hi" message
+- ⚙️ **Settings** - Text span element demonstrating inline content
+- ❓ **Help** - Text span element demonstrating inline content
+- 👋 **Greeting** - A friendly "Hi" message in a paragraph element
 
 ## 🚀 Getting Started
 
