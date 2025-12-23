@@ -21,15 +21,15 @@ This repository serves as a hands-on learning environment for developers explori
 
 | File | Description |
 |------|-------------|
-| **[index.html](index.html)** | A minimal HTML5 page demonstrating proper document structure with interactive elements (settings, help) and a greeting |
+| **[index.html](index.html)** | A minimal HTML5 page demonstrating proper document structure with text elements (help, settings) and a greeting |
 | **[Info.md](Info.md)** | Comprehensive guide covering basic structure and setup for HTML, CSS, JavaScript, C, C++, Java, and Python |
 | **README.md** | This file - your guide to the repository |
 
 ### What's Inside index.html
 
 The demo page includes:
-- ⚙️ **Settings** - Text span element demonstrating inline content
 - ❓ **Help** - Text span element demonstrating inline content
+- ⚙️ **Settings** - Text span element demonstrating inline content
 - 👋 **Greeting** - A friendly "Hi" message in a paragraph element
 
 ## 🚀 Getting Started
