@@ -21,17 +21,16 @@ This repository serves as a hands-on learning environment for developers explori
 
 | File | Description |
 |------|-------------|
-| **[index.html](index.html)** | A minimal HTML5 page demonstrating proper document structure with interactive elements (signin, settings, help) |
+| **[index.html](index.html)** | A minimal HTML5 page demonstrating proper document structure with interactive elements (settings, help) and a greeting |
 | **[Info.md](Info.md)** | Comprehensive guide covering basic structure and setup for HTML, CSS, JavaScript, C, C++, Java, and Python |
 | **README.md** | This file - your guide to the repository |
 
 ### What's Inside index.html
 
 The demo page includes:
-- 🔐 **Sign In** - Navigation element for user authentication
-- ⚙️ **Settings** - Configuration options interface
-- ❓ **Help** - User assistance section
-- 👋 A friendly greeting message
+- ⚙️ **Settings** - Configuration options interface element
+- ❓ **Help** - User assistance section element
+- 👋 **Greeting** - A friendly "Hi" message
 
 ## 🚀 Getting Started
 
@@ -106,6 +105,6 @@ This is an educational and demonstration repository. Feel free to use, modify, a
 
 **Built for learning, designed for clarity** ✨
 
-[View Demo](index.html) • [Report Issue](../../issues) • [Request Feature](../../issues)
+[View Demo](index.html) • [Report Issue](https://github.com/Teamelite12/Test-purpose-only/issues) • [Request Feature](https://github.com/Teamelite12/Test-purpose-only/issues)
 
 </div>
