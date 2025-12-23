@@ -105,6 +105,6 @@ This is an educational and demonstration repository. Feel free to use, modify, a
 
 **Built for learning, designed for clarity** ✨
 
-[View Demo](index.html) • [Report Issue](https://github.com/Teamelite12/Test-purpose-only/issues) • [Request Feature](https://github.com/Teamelite12/Test-purpose-only/issues)
+[View Demo](index.html) • [Report Issue](https://github.com/Teamelite12/Test-purpose-only/issues/new) • [Request Feature](https://github.com/Teamelite12/Test-purpose-only/issues/new)
 
 </div>
