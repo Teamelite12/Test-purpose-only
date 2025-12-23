@@ -15,7 +15,7 @@ This repository serves as a sandbox for:
 | File | Description |
 |------|-------------|
 | `index.html` | Simple HTML5 page with basic elements |
-| `Info.md` | Comprehensive guide to programming language structures (HTML, CSS, JavaScript, C, C++, Java, Python) |
+| `Info.md` | Comprehensive guide to web technologies and programming languages (HTML, CSS, JavaScript, C, C++, Java, Python) |
 
 ## 🚀 Quick Start
 
@@ -39,7 +39,7 @@ The `index.html` file demonstrates:
 - Basic text display with "help", "settings", and a greeting
 
 The `Info.md` file provides:
-- Syntax and structure guides for 7 programming languages
+- Syntax and structure guides for 7 technologies (HTML, CSS, JS, C, C++, Java, Python)
 - Code examples and best practices
 - Compilation and execution instructions
 
