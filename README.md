@@ -1,32 +1,32 @@
-# Test Purpose Only
+# 🧪 Test Purpose Only
 
-A simple demonstration repository showcasing basic HTML structure and GitHub workflow practices.
-
-## Overview
-
-This repository contains a minimal HTML page (`index.html`) that demonstrates:
-- Clean HTML5 document structure
-- Basic text display using semantic HTML elements
-- Proper use of `<span>` and `<p>` tags
+A simple learning repository for web development basics and GitHub workflows.
 
 ## Contents
 
-- **index.html** - A simple HTML page with "help" and "settings" span elements and a greeting message
+- **[index.html](index.html)** - Minimal HTML5 page with text elements (help, settings) and a greeting
+- **[Info.md](Info.md)** - Programming guides for HTML, CSS, JavaScript, C, C++, Java, and Python
 
-## Usage
+## Quick Start
 
-Open `index.html` in any web browser to view the page. The page displays:
-- Two inline text elements: "help" and "settings"
-- A greeting message: "Hi"
+```bash
+git clone https://github.com/Teamelite12/Test-purpose-only.git
+cd Test-purpose-only
+open index.html  # or double-click to view
+```
 
 ## Purpose
 
-This repository is used for testing and demonstration purposes, including:
-- HTML development basics
-- Git workflow practices
-- Pull request processes
-- Code collaboration
+Learn HTML5 structure, semantic elements, and Git workflows. Perfect for students and educators.
+
+## Contributing
+
+Contributions welcome! Submit pull requests or report issues.
 
 ## License
 
-This is a test repository for educational and demonstration purposes.
+Free to use and modify for educational purposes.
+
+---
+
+**Simple • Clear • Educational** ✨
