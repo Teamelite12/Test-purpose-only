@@ -39,7 +39,7 @@ The `index.html` file demonstrates:
 - Basic text display with "help", "settings", and a greeting
 
 The `Info.md` file provides:
-- Syntax and structure guides for 7 technologies (HTML, CSS, JavaScript, C, C++, Java, Python)
+- Syntax and structure guides for multiple technologies (HTML, CSS, JavaScript, C, C++, Java, Python)
 - Code examples and best practices
 - Compilation and execution instructions
 
