@@ -1,0 +1,25 @@
+{
+  "name": "test-purpose-only",
+  "version": "1.0.0",
+  "description": "A simple demonstration repository showcasing basic HTML structure and GitHub workflow practices",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required for static HTML'",
+    "test": "echo 'No tests defined for static HTML'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teamelite12/Test-purpose-only.git"
+  },
+  "keywords": [
+    "html",
+    "test",
+    "demo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teamelite12/Test-purpose-only/issues"
+  },
+  "homepage": "https://github.com/Teamelite12/Test-purpose-only#readme"
+}
