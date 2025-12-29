@@ -44,7 +44,7 @@ The workflow includes examples for:
    - Speeds up Java dependency resolution
 
 5. **Gradle (Java/Kotlin)**
-   - Uses: `gradle/gradle-build-action@v2`
+   - Uses: `gradle/gradle-build-action@v2.4.2`
    - Automatic caching of Gradle dependencies
    - Optimized for Gradle builds
 
