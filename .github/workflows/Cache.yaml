@@ -26,11 +26,9 @@ jobs:
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-npm-
 
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: List the state of node modules
@@ -153,7 +151,12 @@ jobs:
       - name: Build with Gradle
         run: |
           if [ -f build.gradle ] || [ -f build.gradle.kts ]; then
-            ./gradlew build
+            if [ -f gradlew ]; then
+              chmod +x gradlew
+              ./gradlew build
+            else
+              gradle build
+            fi
           else
             echo "No Gradle build file found, skipping Gradle build"
           fi
