@@ -1,10 +1,22 @@
-name: Caching with npm
-on: push
+name: Dependency Caching Demo
+on: 
+  push:
+    branches: [ main, copilot/** ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
 jobs:
-  build:
+  npm-caching:
+    name: NPM Dependency Caching
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Cache node modules
         id: cache-npm
@@ -33,3 +45,115 @@ jobs:
 
       - name: Test
         run: npm test
+  
+  yarn-caching:
+    name: Yarn Dependency Caching
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: |
+          if [ -f yarn.lock ]; then
+            yarn install --frozen-lockfile
+          else
+            echo "No yarn.lock found, skipping yarn install"
+          fi
+
+  pip-caching:
+    name: Python Pip Dependency Caching
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, skipping pip install"
+          fi
+
+  maven-caching:
+    name: Maven Dependency Caching
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build with Maven
+        run: |
+          if [ -f pom.xml ]; then
+            mvn clean install
+          else
+            echo "No pom.xml found, skipping Maven build"
+          fi
+
+  gradle-caching:
+    name: Gradle Dependency Caching
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          cache-read-only: false
+
+      - name: Build with Gradle
+        run: |
+          if [ -f build.gradle ] || [ -f build.gradle.kts ]; then
+            ./gradlew build
+          else
+            echo "No Gradle build file found, skipping Gradle build"
+          fi
